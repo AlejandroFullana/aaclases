@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AAclases</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      color: #333333;
+      font-size: 28px;
+      margin-top: 20px;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #007bff; /* Primary color */
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .button:hover {
+      background-color: #0056b3; /* Darker shade of primary color */
+    }
+    
+    .container {
+      margin-top: 40px;
+    }
+    
+    .sub-buttons {
+      display: none;
+      margin-top: 20px;
+      flex-direction: column; /* Added */
+    }
+    
+    .sub-button {
+      display: block; /* Changed from inline-block */
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #4caf50; /* Secondary color */
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .sub-button:hover {
+      background-color: #388e3c; /* Darker shade of secondary color */
+    }
+  </style>
+</head>
+
+<body>
+  <h1>AAclases</h1>
+  
+  <div class="container">
+    <a href="#" class="button" onclick="toggleSubButtons('fisica-quimica')">Física y Química</a>
+    <a href="#" class="button" onclick="toggleSubButtons('matematicas')">Matemáticas</a>
+  </div>
+  
+  <div id="fisica-quimica-buttons" class="sub-buttons">
+    <a href="fisica-quimica/1ESO.html" class="sub-button">1 de la ESO</a>
+    <a href="fisica-quimica/2ESO.html" class="sub-button">2 de la ESO</a>
+    <a href="fisica-quimica/3ESO.html" class="sub-button">3 de la ESO</a>
+    <a href="fisica-quimica/4ESO.html" class="sub-button">4 de la ESO</a>
+    <a href="fisica-quimica/1BACH.html" class="sub-button">1 de BACH</a>
+    <a href="fisica-quimica/2BACH.html" class="sub-button">2 de BACH</a>
+  </div>
+  
+  <div id="matematicas-buttons" class="sub-buttons">
+    <a href="matematicas/1ESO.html" class="sub-button">1 de la ESO</a>
+    <a href="matematicas/2ESO.html" class="sub-button">2 de la ESO</a>
+    <a href="matematicas/3ESO.html" class="sub-button">3 de la ESO</a>
+    <a href="matematicas/4ESO.html" class="sub-button">4 de la ESO</a>
+    <a href="matematicas/1BACH.html" class="sub-button">1 de BACH</a>
+    <a href="matematicas/2BACH.html" class="sub-button">2 de BACH</a>
+  </div>
+  
+  <script>
+    function toggleSubButtons(buttonId) {
+      var buttons = document.getElementsByClassName('sub-buttons');
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].style.display = 'none';
+      }
+      document.getElementById(buttonId + '-buttons').style.display = 'block';
+    }
+  </script>
+</body>
+
+</html>
